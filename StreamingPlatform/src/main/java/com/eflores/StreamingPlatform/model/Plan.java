@@ -23,8 +23,8 @@ public class Plan {
     private String nombre;
     private String descripcion;
     private Integer maxPerfiles;
-    private Usuario usuarioCreador;
+    private String usuarioCreador;
     private LocalDateTime fechaCreacion;
-    private Usuario usuarioModificador;
+    private String usuarioModificador;
     private LocalDateTime fechaModificacion;
 }

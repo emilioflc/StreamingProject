@@ -62,7 +62,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>streaming-platform-docker</finalName>
 	</build>
 
 </project>

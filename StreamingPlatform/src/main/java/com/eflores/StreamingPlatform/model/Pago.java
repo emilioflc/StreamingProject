@@ -20,9 +20,9 @@ public class Pago {
     @GeneratedValue(strategy = AUTO)
     private Long id;
 
-    private Usuario usuarioCreador;
+    private String usuarioCreador;
     private Long cantidad;
     private LocalDateTime fechaCreacion;
-    private Usuario usuarioModificador;
+    private String usuarioModificador;
     private LocalDateTime fechaModificacion;
 }

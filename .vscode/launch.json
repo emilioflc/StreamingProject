@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-StreamingPlatformApplication<StreamingPlatform>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.eflores.StreamingPlatform.StreamingPlatformApplication",
+            "projectName": "StreamingPlatform",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

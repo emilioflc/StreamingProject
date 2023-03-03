@@ -36,9 +36,9 @@ public class Usuario {
     private Plan plan;
     private String pathFotoPerfil;
     private LocalDateTime vencimientoPlan;
-    private Usuario usuarioCreador;
+    private String usuarioCreador;
     private LocalDateTime fechaCreacion;
-    private Usuario usuarioModificador;
+    private String usuarioModificador;
     private LocalDateTime fechaModificacion;
 
 }

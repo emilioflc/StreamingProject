@@ -19,10 +19,10 @@ public class Perfil {
     @Id @GeneratedValue(strategy = AUTO)
     private Long id;
 
-    private Usuario usuarioCreador;
+    private String usuarioCreador;
     private String alias;
     private Boolean mayorEdad;
     private LocalDateTime fechaCreacion;
-    private Usuario usuarioModificador;
+    private String usuarioModificador;
     private LocalDateTime fechaModificacion;
 }
