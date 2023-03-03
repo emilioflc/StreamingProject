@@ -33,7 +33,7 @@ public class Usuario {
     private String correo;
     
     private String password;
-    private Plan plan;
+    private Long plan;
     private String pathFotoPerfil;
     private LocalDateTime vencimientoPlan;
     private String usuarioCreador;

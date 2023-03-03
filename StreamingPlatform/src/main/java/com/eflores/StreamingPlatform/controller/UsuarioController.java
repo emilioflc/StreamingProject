@@ -31,7 +31,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/usuario")
 @RequiredArgsConstructor
 public class UsuarioController {
     private final UsuarioServiceImplementation usuarioService;
@@ -73,7 +73,7 @@ public class UsuarioController {
             Respuesta.builder()
                     .timeStamp(now())
                     .data(of("usuario",usuarioService.get(id)))
-                    .mensaje("Usuario exitosamente obtenidos")
+                    .mensaje("Usuario exitosamente obtenido")
                     .status(OK)
                     .codigoStatus(OK.value())
                     .build()
