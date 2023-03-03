@@ -30,7 +30,7 @@ public class UsuarioServiceImplementation implements UsuarioService{
     @Override
     public Usuario crear(Usuario usuario) {
         log.info("Creando nuevo usuario: {}",usuario.getCorreo());
-        usuario.setPathFotoPerfil(setUsuarioPathFotoPerfil());
+        //usuario.setPathFotoPerfil(setUsuarioPathFotoPerfil());
         return usuarioRepo.save(usuario);
     }
 
@@ -55,7 +55,7 @@ public class UsuarioServiceImplementation implements UsuarioService{
     @Override
     public Usuario modificar(Usuario usuario) {
         log.info("Modificando usuario: {}",usuario.getCorreo());
-        usuario.setPathFotoPerfil(setUsuarioPathFotoPerfil());
+        //usuario.setPathFotoPerfil(setUsuarioPathFotoPerfil());
         return usuarioRepo.save(usuario);
     }
 
@@ -85,8 +85,9 @@ public class UsuarioServiceImplementation implements UsuarioService{
         return Boolean.TRUE;
     }
 
-    private String setUsuarioPathFotoPerfil() {
-        return null;
-    }
+    // private String setUsuarioPathFotoPerfil() {
+        
+    //     return null;
+    // }
     
 }
