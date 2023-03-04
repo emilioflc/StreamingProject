@@ -45,19 +45,7 @@ public class PagoServiceImplementation implements PagoService{
         return pagoRepo.findAll(of(0, limit)).toList();
     }
 
-    /**
-     * Modifica un pago en la Base de Datos.
-     * 
-     * @param pago el pago a modificar
-     * @return el pago modificado
-     */
-    @Override
-    public Pago modificar(Pago pago) {
-        log.info("Modificando pago: {}",pago.getId());
-        return pagoRepo.save(pago);
-    }
-
-
+    
     /**
      * Consulta un pago de la Base de Datos.
      * 
