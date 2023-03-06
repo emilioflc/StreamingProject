@@ -40,5 +40,4 @@ public class Usuario {
     private LocalDateTime fechaCreacion;
     private String usuarioModificador;
     private LocalDateTime fechaModificacion;
-
 }

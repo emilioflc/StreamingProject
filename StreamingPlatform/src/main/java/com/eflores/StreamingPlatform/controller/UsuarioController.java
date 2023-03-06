@@ -30,6 +30,8 @@ import com.eflores.StreamingPlatform.service.implementation.UsuarioServiceImplem
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
+import java.util.concurrent.TimeUnit;
+
 @RestController
 @RequestMapping("/usuario")
 @RequiredArgsConstructor
@@ -37,7 +39,8 @@ public class UsuarioController {
     private final UsuarioServiceImplementation usuarioService;
 
     @GetMapping("/reporte")
-    public ResponseEntity<Respuesta> getUsuarios(){
+    public ResponseEntity<Respuesta> getUsuarios() throws InterruptedException{
+        TimeUnit.SECONDS.sleep(3);
         return ResponseEntity.ok(
             Respuesta.builder()
                     .timeStamp(now())
@@ -67,12 +70,25 @@ public class UsuarioController {
         );
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/getId/{id}")
     public ResponseEntity<Respuesta> getUsuario(@PathVariable("id") Long id){
         return ResponseEntity.ok(
             Respuesta.builder()
                     .timeStamp(now())
                     .data(of("usuario",usuarioService.get(id)))
+                    .mensaje("Usuario exitosamente obtenido")
+                    .status(OK)
+                    .codigoStatus(OK.value())
+                    .build()
+        );
+    }
+
+    @GetMapping("/get/{correo}")
+    public ResponseEntity<Respuesta> getUsuarioByCorreo(@PathVariable("correo") String correo){
+        return ResponseEntity.ok(
+            Respuesta.builder()
+                    .timeStamp(now())
+                    .data(of("usuario",usuarioService.getByCorreo(correo)))
                     .mensaje("Usuario exitosamente obtenido")
                     .status(OK)
                     .codigoStatus(OK.value())

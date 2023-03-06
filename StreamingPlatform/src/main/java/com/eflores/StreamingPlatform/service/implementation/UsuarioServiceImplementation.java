@@ -74,6 +74,18 @@ public class UsuarioServiceImplementation implements UsuarioService{
     }
 
     /**
+     * Consulta un usuario de la Base de Datos.
+     * 
+     * @param correo el correo del usuario deseado
+     * @return el usuario consultado
+     */
+    @Override
+    public Usuario getByCorreo(String correo) {
+        log.info("Consultando usuario por correo: {}",correo);
+        return usuarioRepo.findByCorreo(correo);
+    }
+
+    /**
      * Elimina un usuario en la Base de Datos.
      * 
      * @param id el id del usuario a eliminar

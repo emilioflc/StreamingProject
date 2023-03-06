@@ -10,5 +10,6 @@ public interface UsuarioService {
     Usuario modificar(Usuario usuario);
     Collection<Usuario> listAll(int limit);
     Usuario get(Long id);
+    Usuario getByCorreo(String correo);
     Boolean eliminar(Long id) throws IOException;
 }
