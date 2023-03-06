@@ -54,7 +54,7 @@ public class PerfilController {
         );
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<Respuesta> eliminarPerfil(@PathVariable("id") Long id){
         return ResponseEntity.ok(
             Respuesta.builder()

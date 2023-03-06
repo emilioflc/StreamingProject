@@ -80,7 +80,7 @@ public class UsuarioController {
         );
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<Respuesta> eliminarUsuario(@PathVariable("id") Long id) throws IOException{
         return ResponseEntity.ok(
             Respuesta.builder()

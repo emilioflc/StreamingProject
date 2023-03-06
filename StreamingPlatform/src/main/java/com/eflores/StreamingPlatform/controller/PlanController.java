@@ -54,7 +54,7 @@ public class PlanController {
         );
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<Respuesta> eliminarPlan(@PathVariable("id") Long id){
         return ResponseEntity.ok(
             Respuesta.builder()

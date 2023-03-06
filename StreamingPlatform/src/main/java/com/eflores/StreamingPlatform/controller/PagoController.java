@@ -70,7 +70,7 @@ public class PagoController {
         );
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<Respuesta> eliminarPago(@PathVariable("id") Long id){
         return ResponseEntity.ok(
             Respuesta.builder()
